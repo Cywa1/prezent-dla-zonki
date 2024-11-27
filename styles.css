@@ -87,8 +87,8 @@ body {
 
 /* Pojemnik na zdjęcie */
 #photo-container {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     margin: 0 10px;
     overflow: hidden; /* Ukrywa nadmiar zdjęcia */
 }
