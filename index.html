@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezent dla żonki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Tekst nad sercami -->
+        <div id="text-container">
+            <p id="text">Kocham Cię</p>
+        </div>
+        
+        <!-- Koperta -->
+        <div id="envelope" onclick="revealHearts()">
+            <p>Prezent dla żonki</p>
+        </div>
+        
+        <!-- Serce i miejsce na zdjęcie -->
+        <div id="hearts-container">
+            <div id="heart-left"></div>
+            <div id="photo-container">
+                <!-- Miejsce na zdjęcie -->
+                <img id="photo" src="zona.jpg" alt="Zdjęcie między sercami" />
+            </div>
+            <div id="heart-right"></div>
+        </div>
+    </div>
+
+    <script>
+        function revealHearts() {
+            document.getElementById('envelope').style.display = 'none'; // Ukrycie koperty
+            document.getElementById('hearts-container').style.display = 'flex'; // Pokazanie serc
+            document.getElementById('text').style.opacity = '1'; // Pojawienie się tekstu
+            document.getElementById('text').style.transform = 'translateY(-20px)'; // Animacja tekstu
+        }
+    </script>
+</body>
+</html>
+
+
+

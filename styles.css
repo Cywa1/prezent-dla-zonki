@@ -1,0 +1,147 @@
+/* Styl dla całego ekranu */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eb92b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Główny kontener */
+#container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styl dla koperty */
+#envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: #ffab91;
+    border: 2px solid #d84315;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#envelope:hover {
+    transform: scale(1.1);
+}
+
+#envelope p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Kontener dla dwóch serc i zdjęcia */
+#hearts-container {
+    display: none; /* Ukrycie na początku */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Lewa część serca */
+#heart-left {
+    width: 150px;
+    height: 150px;
+    background-color: #e57373;
+    transform: rotate(-45deg);
+    position: relative;
+    margin-right: 10px;
+}
+
+#heart-left::before,
+#heart-left::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #e57373;
+    border-radius: 50%;
+}
+
+#heart-left::before {
+    top: -75px;
+    left: 0;
+}
+
+#heart-left::after {
+    top: 0;
+    left: 75px;
+}
+
+/* Pojemnik na zdjęcie */
+#photo-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 10px;
+    overflow: hidden; /* Ukrywa nadmiar zdjęcia */
+}
+
+#photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Dopasowanie zdjęcia do kontenera */
+    border-radius: 10px;
+}
+
+/* Prawa część serca */
+#heart-right {
+    width: 150px;
+    height: 150px;
+    background-color: #e57373;
+    transform: rotate(-45deg);
+    position: relative;
+    margin-left: 10px;
+}
+
+#heart-right::before,
+#heart-right::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #e57373;
+    border-radius: 50%;
+}
+
+#heart-right::before {
+    top: -75px;
+    left: 0;
+}
+
+#heart-right::after {
+    top: 0;
+    left: 75px;
+}
+
+/* Styl dla tekstu nad sercem */
+#text-container {
+    height: 50px; /* Miejsce na tekst nad sercem */
+}
+
+#text {
+    font-size: 24px;
+    color: #d84315;
+    font-weight: bold;
+    margin: 0;
+    opacity: 0; /* Tekst jest ukryty na starcie */
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease; /* Animacja pojawiania się tekstu */
+}
+
